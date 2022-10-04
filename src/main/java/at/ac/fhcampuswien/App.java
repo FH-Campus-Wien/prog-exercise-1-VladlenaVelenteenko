@@ -25,54 +25,121 @@ public class App {
 
     //todo Task 3
     public void sumOfLiterals(){
-        char Letter = 'Z';
-        String Random1 = "0xface";
-        int TheOnly = 012;
-        String Random2 = "80L";
-        String Random3 = "44e-1f";
-        float Float = 5.5f;
-        double FirstDouble = 8.88e1;
-        double SecondDouble = 99.9;
+        int a = 0xface;
+        int b = 012;
+        long c = 80L;
+        float d = 44e-1f;
+        double e = 8.88e1;
+        double f = 99.9;
+        char g = 'Z';
+        float h = 5.5f;
 
-        // wandle um
-        int NewRandom1 = Integer.valueOf(Random1);
-        int NewFloat = (int)Float;
-        int NewFirstDouble = (int) FirstDouble;
-        int NewSecondDouble = (int) SecondDouble;
+        int m = (int) c;
+        int t = (int) d;
+        int k = (int) e;
+        int n = (int) f;
+        int i = (int) g;
+        int o = (int) h;
 
-        int NewRandom2 = Integer.parseInt(Random2);
-        int NewRandom3 = Integer.parseInt(Random3);
 
-        int sum = Letter + NewRandom1 + TheOnly + NewRandom2 + NewRandom3 + NewFloat + NewFirstDouble + NewSecondDouble;
+        int sum = (m+t+k+n+i+o+a+b);
+
         System.out.println(sum);
 
     }
 
     //todo Task 4
     public void addTwoNumbers(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        int n1 = scanner.nextInt();
+        int n2 = scanner.nextInt();
+
+        int sum = (n1 + n2);
+        System.out.println(sum);
+
     }
 
     //todo Task 5
     public void swapTwoNumbers(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        int x = scanner.nextInt(); // 10
+        int y = scanner.nextInt(); //5
+
+        System.out.println("Before Swap:" );
+
+        System.out.println("x: "+"y: " + "After Swap:");
+
+        x = x + y ; //15
+        y = x - y ; //10
+        x = x - y ; //5
+
+        System.out.println("x: "+x);
+        System.out.println("y: "+y);
+
+
     }
 
     //todo Task 6
     public void compareTwoNumbers(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        int n1 = scanner.nextInt();
+        int n2 = scanner.nextInt();
+
+        if (n1>n2) {
+            System.out.println("n1: " + "n2: " + "n1 > n2");
+        }
+        else if (n2 > n1) {
+            System.out.println("n1: " + "n2: " + "n2 > n1");
+        }
+        else {
+            System.out.println("n1: " + "n2: " + "n1 == n2");
+        }
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+
+        int x = scanner.nextInt();
+
+        if((x < 0) || (x >= 100000))
+        { System.out.println("Enter annual Revenue: " +  "Invalid Revenue");}
+        else if (x < 20000);
+        System.out.println("Poor sales Revenue");
+
     }
 
     //todo Task 8
-    public void getCommissionRate(){
-        // input your solution here
-    }
+    public void getCommissionRate() {
+        Scanner scanner = new Scanner(System.in);
 
+        int CommissionClass = scanner.nextInt();
+
+        switch (CommissionClass) {
+            case 1:
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.01");
+                break;
+
+            case 2:
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.02");
+                break;
+
+            case 3:
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.03");
+                break;
+
+            case 4:
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.04");
+                break;
+
+            default:
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.0");
+
+        }
+    }
     //todo Task 9
     public void leapyear(){
         // input your solution here
